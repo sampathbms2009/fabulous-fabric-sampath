@@ -1,0 +1,34 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2016.04.04.02.31.23;	author sampathk;	state Exp;
+branches;
+next	;
+
+
+desc
+@exit
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@from fabric.api import local
+
+def test():
+	local("./manage.py")
+
+def commit():
+	local("git add . && git commit -m 'testing fabric' && git push")
+
+def push():
+	local("git push origin master")
+@
